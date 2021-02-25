@@ -49,6 +49,36 @@ function largestOfFour(arr) {
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-///////////////////////////////////////#6
-///////////////////////////////////////#7
+///////////////////////////////////////#6 Check if a string (first argument, str) ends with the given target string (second argument, target).
+function confirmEnding(str, target) {
+  let num = target.length;
+  let result = str.substring(str.length - num, str.length);
+  if (result == target) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+confirmEnding("Bastian", "n");
+///////////////////////////////////////#7 Repeat a String
+function repeatStringNumTimes(str, num) {
+  let string = "";
+  while (num > 0){
+    string += str;
+    num--;
+  }
+  return string;
+}
+
+repeatStringNumTimes("abc", 3);
 ///////////////////////////////////////#8
+///////////////////////////////////////#9
+///////////////////////////////////////#10
+///////////////////////////////////////#11
+///////////////////////////////////////#12
+///////////////////////////////////////#13
+///////////////////////////////////////#14
+///////////////////////////////////////#15
+///////////////////////////////////////#16
+
