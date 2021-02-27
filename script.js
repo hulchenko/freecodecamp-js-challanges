@@ -84,8 +84,19 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
-///////////////////////////////////////#9
-///////////////////////////////////////#10
+///////////////////////////////////////#9 Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. 
+function findElement(arr, func) {
+  return arr.find(func);
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+///////////////////////////////////////#10 Check if a value is classified as a boolean primitive. Return true or false.
+function booWho(bool) {
+  let test = typeof(bool);
+  return test === "boolean" ? true : false;
+}
+
+booWho(null);
 ///////////////////////////////////////#11
 ///////////////////////////////////////#12
 ///////////////////////////////////////#13
