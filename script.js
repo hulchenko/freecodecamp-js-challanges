@@ -129,7 +129,32 @@ function bouncer(arr) {
 }
 
 console.log(bouncer([7, "ate", "", false, 9]));
-///////////////////////////////////////#14
-///////////////////////////////////////#15
+///////////////////////////////////////#14 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+function getIndexToIns(arr, num) {
+  arr.sort(function (a,b) {
+    return a - b;
+  });
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i] >= num) {
+        return i;
+      }
+  }
+  return arr.length;
+}
+
+console.log(getIndexToIns([40, 60,], 50));
+///////////////////////////////////////#15 Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+function mutation(arr) {
+  let arr1 = arr[0].toLowerCase();
+  let arr2 = arr[1].toLowerCase();
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) < 0)
+      return false;
+    } 
+   return true;
+  }
+  
+
+console.log(mutation(["hello", "hey"]));
 ///////////////////////////////////////#16
 
