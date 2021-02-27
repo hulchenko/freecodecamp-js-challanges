@@ -97,7 +97,16 @@ function booWho(bool) {
 }
 
 booWho(null);
-///////////////////////////////////////#11
+///////////////////////////////////////#11 Return the provided string with the first letter of each word capitalized. 
+function titleCase(str) {
+  let arr = str.split(" ");
+  let lowerCase = arr.map(i => i.toLowerCase());
+  let firstCap = lowerCase.map(i => i.replace(i.charAt(0), i.charAt(0).toUpperCase()));
+  let arrJoin = firstCap.join(" ");
+  return arrJoin;
+  }
+
+console.log(titleCase("I'm a little tea pot"));
 ///////////////////////////////////////#12
 ///////////////////////////////////////#13
 ///////////////////////////////////////#14
