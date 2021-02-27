@@ -106,9 +106,29 @@ function titleCase(str) {
   return arrJoin;
   }
 
-console.log(titleCase("I'm a little tea pot"));
-///////////////////////////////////////#12
-///////////////////////////////////////#13
+titleCase("I'm a little tea pot");
+///////////////////////////////////////#12 Copy each element of the first array into the second array, in order, starting at n index.
+function frankenSplice(arr1, arr2, n) {
+  let secondArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    secondArray.splice(n,0,arr1[i]);
+    n++;
+  }
+  return secondArray;
+ }
+ frankenSplice([1, 2, 3], [4, 5, 6], 1);
+///////////////////////////////////////#13 Remove all falsy values from an array.
+function bouncer(arr) {
+  let array = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      array.push(arr[i]);
+    }
+  }
+  return array;
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
 ///////////////////////////////////////#14
 ///////////////////////////////////////#15
 ///////////////////////////////////////#16
