@@ -114,7 +114,7 @@ booWho(null);
 function titleCase(str) {
   let arr = str.split(" ");
   let lowerCase = arr.map(i => i.toLowerCase());
-  let firstCap = lowerCase.map(i => i.replace(i.charAt(0), i.charAt(0).toUpperCase()));
+  let firstCap = lowerCase.map(i => i.replace(i.charAt(0), i.charAt(0).toUpperCase()));   
   let arrJoin = firstCap.join(" ");
   return arrJoin;
   }
@@ -132,13 +132,13 @@ function frankenSplice(arr1, arr2, n) {
  frankenSplice([1, 2, 3], [4, 5, 6], 1);
 ///////////////////////////////////////#13 Remove all falsy values from an array.
 function bouncer(arr) {
-  let array = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-      array.push(arr[i]);
-    }
+  let copy = [];
+  for(let i = 0; i<arr.length; i++){
+      if (Boolean(arr[i]) == true){
+        copy.push(arr[i]);
+      }
   }
-  return array;
+  return copy;
 }
 
 console.log(bouncer([7, "ate", "", false, 9]));
