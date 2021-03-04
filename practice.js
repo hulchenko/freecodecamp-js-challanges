@@ -62,3 +62,9 @@
 
 // var toString = JSON.stringify(person);
 // console.log(JSON.parse(toString));
+
+document.querySelector("button").addEventListener("click", function(event){
+        var value = document.querySelector("input").value;
+        document.querySelector("h1").innerHTML = value;
+        console.log(value);
+})
