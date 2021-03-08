@@ -63,8 +63,23 @@
 // var toString = JSON.stringify(person);
 // console.log(JSON.parse(toString));
 
-document.querySelector("button").addEventListener("click", function(event){
-        var value = document.querySelector("input").value;
-        document.querySelector("h1").innerHTML = value;
-        console.log(value);
-})
+// document.querySelector("button").addEventListener("click", function(event){
+//         var value = document.querySelector("input").value;
+//         document.querySelector("h1").innerHTML = value;
+//         console.log(value);
+// })
+
+// function Car(name, year) {
+//         this.name = name;
+//         this.year = year;
+// }
+
+// Car.prototype.getAge = function() {
+//         return new Date().getFullYear() - this.year;
+// }
+
+// let ford = new Car("Ford", 1959);
+// let niva = new Car("Niva", 1972);
+
+// console.log(ford);
+// console.log(niva);
