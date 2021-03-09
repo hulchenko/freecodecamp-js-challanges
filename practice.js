@@ -135,7 +135,7 @@
 // }
 
 
-//hasOwnProperty old vs new:
+/////////////hasOwnProperty old vs new:
 // var person = {
 //         name: "Max",
 //         age: 28,
@@ -156,7 +156,7 @@
 //         console.log(person[key])
 // });
 
-//JS Closures:
+////////////JS Closures:
 // var createCounter = function() {
 //         var counter = 0;
 
@@ -186,7 +186,7 @@
 // counterB.decrement();
 // counterB.decrement();
 
-//Context:
+////////////Context:
 
 // var person = {
 //         age: 28,
@@ -225,7 +225,7 @@
 
 // person.displayInfo(2500);
 
-//Context 2:
+/////////////Context 2:
 
 // function printObject(objName) {
 //         console.log("Printing object: ", objName)
@@ -282,3 +282,48 @@
 
 // console.log("A", a.indexDouble());
 // console.log("B", b.indexDouble());
+
+///////////////JS ES6:
+
+///////////////variable let:
+// for (let i = 0; i < 5; i++) {
+//         setTimeout(function(){
+//                 console.log(i)
+//         }, 2000)
+// }
+
+/////////////arrow function:
+// function getAge(year) {
+//         const currentYear = new Date().getFullYear();
+//         return currentYear - year;
+// }
+
+// console.log(getAge(1993));
+
+// const calculateAge =  (year) => {
+//         const currentYear = new Date().getFullYear();
+//         return currentYear - year; 
+// }
+
+// const getAge = year => new Date().getFullYear() - year;
+// console.log(getAge(1990))
+
+// const person = {
+//         firstName: "Maxim",
+//         age: 28,
+//         logNameWithTimeout: function() {
+//                 setTimeout(function(){
+//                         console.log(this.firstName)
+//                 }.bind(this), 1000)
+//         }
+// }
+
+// const person = {
+//         firstName: "Maxim",
+//         age: 28,
+//         logNameWithTimeout() { //unlike regular functions - arrow functions do not create separate ambience within itself, so method .bind(this) wouldn't be needed here
+//                 setTimeout (() => {
+//                         console.log(this.firstName)
+//                 }, 1000)
+//         }
+// }
