@@ -83,3 +83,53 @@
 
 // console.log(ford);
 // console.log(niva);
+
+// var ford = Object.create({
+//         calculateMileagePerYear: function() {
+//                Object.defineProperty(this, "distancePerYear", {
+//                        value: Math.ceil(this.mileage / this.age),
+//                        enumerable: true,
+//                        writable: true,
+//                        configurable: true
+//                })
+//         }
+// }, {
+//         name: {value: "Ford",
+//                 enumerable: true,
+//                 writable: false,
+//                 configurable: false
+//         },
+//         model: {value: "Focus",
+//                 enumerable: true,
+//                 writable: false,
+//                 configurable: false
+//         },
+//         year: { value: 2015,
+//                 enumerable: true,
+//                 writable: false,
+//                 configurable: false
+//         },
+//         mileage: {value: 120500,
+//                  enumerable: true,
+//                  writable: true,
+//                  configurable: false
+//         },
+//         age: {
+//                 enumerable: true,
+//                 get: function() {
+//                         console.log("Calculating the age");
+//                         return new Date().getFullYear() - this.year;
+//                 },
+//                 set: function() {
+//                         console.log("Setting new age")
+//                 }
+//         }
+// })
+
+// //to display all of the properties within ford object
+// for (let key in ford) {
+//         if (ford.hasOwnProperty(key)){
+//                 console.log(key, ford[key])
+//         }
+     
+// }
