@@ -1,4 +1,5 @@
-//Vladilen Minin course
+
+
 // var p = document.querySelectorAll('p');
 
 // for (let i = 0; i<p.length; i++) {
@@ -226,36 +227,58 @@
 
 //Context 2:
 
-function printObject(objName) {
-        console.log("Printing object: ", objName)
-        for (var key in this) {
-                if(this.hasOwnProperty(key)){
-                        console.log("[" + key + "]", this[key]);
-                }
-        }
-}
+// function printObject(objName) {
+//         console.log("Printing object: ", objName)
+//         for (var key in this) {
+//                 if(this.hasOwnProperty(key)){
+//                         console.log("[" + key + "]", this[key]);
+//                 }
+//         }
+// }
 
 
-var person = {
-        firstName: "Max",
-        job: "BackEnd",
-        age: 29,
-        friends: ["Elena", "Igor"]
+// var person = {
+//         firstName: "Max",
+//         job: "BackEnd",
+//         age: 29,
+//         friends: ["Elena", "Igor"]
 
-}
+// }
 
-var car = {
-        name: "Ford",
-        model: "Focus",
-        year: 2017
-}
+// var car = {
+//         name: "Ford",
+//         model: "Focus",
+//         year: 2017
+// }
 
-//#1
-var printPerson = printObject.bind(person);
-printPerson("Person")
+// //#1
+// var printPerson = printObject.bind(person);
+// printPerson("Person")
 
-//#2 
-printObject.call(car, "Vehicle")
+// //#2 
+// printObject.call(car, "Vehicle")
 
-//#3
-printObject.apply(person, ["Person"])
+// //#3
+// printObject.apply(person, ["Person"])
+
+//Practice:
+
+// var a = [1,2,3];
+// var b = [5, "Hello", 6];
+
+
+// Array.prototype.indexDouble = function() {
+//         let newArray = this.map(function(i){
+//                if(typeof i === "number"){
+//                        return i*=i;
+//                        //or Math.pow(item,2) << brings index#1 to the power of index#2.
+//                }
+//                if(typeof i === "string"){
+//                        return i+=i;
+//                }
+//         })
+//         return newArray;
+// }
+
+// console.log("A", a.indexDouble());
+// console.log("B", b.indexDouble());
