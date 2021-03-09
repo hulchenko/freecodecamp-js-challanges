@@ -249,3 +249,13 @@ var car = {
         model: "Focus",
         year: 2017
 }
+
+//#1
+var printPerson = printObject.bind(person);
+printPerson("Person")
+
+//#2 
+printObject.call(car, "Vehicle")
+
+//#3
+printObject.apply(person, ["Person"])
