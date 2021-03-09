@@ -184,3 +184,68 @@
 // counterB.decrement();
 // counterB.decrement();
 // counterB.decrement();
+
+//Context:
+
+// var person = {
+//         age: 28,
+//         name: "Max",
+//         job: "FrontEnd",
+//         displayInfo: function(ms) {
+//                 let self = this; //defined variable self, as closure, to use it in the function below
+                
+//                 setTimeout(function() {
+//                         console.log("Name: ", self.name); //this was reading from setTimeOut function, that used WINDOW as it's object, within the function.
+//                         console.log("Job: ", self.job);
+//                         console.log("Age: ", self.age);
+//                 },ms)
+               
+//         } 
+// }
+
+// person.displayInfo(2500);
+
+// //or it can be done with bind method:
+
+// var person = {
+//         age: 28,
+//         name: "Max",
+//         job: "FrontEnd",
+//         displayInfo: function(ms) {
+//                 setTimeout(function() {
+//                         console.log("Name: ", this.name);
+//                         console.log("Job: ", this.job);
+//                         console.log("Age: ", this.age);
+//                 }.bind(this),ms) //as bind is outside the function, it's still referencing to previous definition of the word "this", which is "person".
+               
+//         } 
+// }
+
+
+// person.displayInfo(2500);
+
+//Context 2:
+
+function printObject(objName) {
+        console.log("Printing object: ", objName)
+        for (var key in this) {
+                if(this.hasOwnProperty(key)){
+                        console.log("[" + key + "]", this[key]);
+                }
+        }
+}
+
+
+var person = {
+        firstName: "Max",
+        job: "BackEnd",
+        age: 29,
+        friends: ["Elena", "Igor"]
+
+}
+
+var car = {
+        name: "Ford",
+        model: "Focus",
+        year: 2017
+}
