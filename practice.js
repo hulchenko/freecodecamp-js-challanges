@@ -131,5 +131,56 @@
 //         if (ford.hasOwnProperty(key)){
 //                 console.log(key, ford[key])
 //         }
-     
 // }
+
+
+//hasOwnProperty old vs new:
+// var person = {
+//         name: "Max",
+//         age: 28,
+//         job: "FrontEnd"
+// }
+
+// //old:
+// for (let key in person) {
+
+//         if (person.hasOwnProperty(key)){
+//                 console.log(key, person[key])
+//         }
+       
+// }
+
+// //new:
+// Object.keys(person).forEach(function(key){
+//         console.log(person[key])
+// });
+
+//JS Closures:
+// var createCounter = function() {
+//         var counter = 0;
+
+//  return {
+//          increment: function () {
+//                  counter++;
+//          },
+//          decrement: function () {
+//                 counter--;
+//          },
+//          getCounter: function () {
+//                  return counter;
+//          }
+//  }
+// }
+
+// var counterA = createCounter("This is for counterA: ");
+// var counterB = createCounter("This is for counterB: ");
+
+// counterA.increment();
+// counterA.increment();
+// counterA.increment();
+// counterA.increment();
+
+
+// counterB.decrement();
+// counterB.decrement();
+// counterB.decrement();
