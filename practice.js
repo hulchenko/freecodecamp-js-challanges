@@ -327,3 +327,15 @@
 //                 }, 1000)
 //         }
 // }
+
+//////////Default parameters ES6:
+// const createPost = (title = "Default title", text = "Default Text", date = new Date().toLocaleDateString()) => {
+//         return {
+//                 title: title, //if key and it's value are identical, we can just use 1 word: title
+//                 text: text, // text
+//                 date: date // date
+//         }
+// }
+
+// const post = createPost ("New Year", "2020 is coming!");
+// console.log(post)
