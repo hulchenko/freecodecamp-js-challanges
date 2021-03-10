@@ -1,4 +1,3 @@
-/*
 
 var p = document.querySelectorAll('p');
 
@@ -63,8 +62,8 @@ var person = {
 
 var toString = JSON.stringify(person);
 console.log(JSON.parse(toString));
-*/
-/*
+
+
 document.querySelector("button").addEventListener("click", function(event){
         var value = document.querySelector("input").value;
         document.querySelector("h1").innerHTML = value;
@@ -134,11 +133,11 @@ for (let key in ford) {
                 console.log(key, ford[key])
         }
 }
-*/
+
 
 /////////////hasOwnProperty old vs new:
 
-/*var person = {
+var person = {
         name: "Max",
         age: 28,
         job: "FrontEnd"
@@ -157,10 +156,10 @@ for (let key in person) {
 Object.keys(person).forEach(function(key){
         console.log(person[key])
 });
-*/
+
 
 ////////////JS Closures:
-/*
+
 var createCounter = function() {
         var counter = 0;
 
@@ -228,11 +227,11 @@ var person = {
 
 
 person.displayInfo(2500);
-*/
+
 
 /////////////Context 2:
 
-/*
+
 function printObject(objName) {
         console.log("Printing object: ", objName)
         for (var key in this) {
@@ -288,11 +287,11 @@ Array.prototype.indexDouble = function() {
 
 console.log("A", a.indexDouble());
 console.log("B", b.indexDouble());
-*/
+
 
 ///////////////JS ES6:
 
-/*
+
 ///////////////variable let:
 for (let i = 0; i < 5; i++) {
         setTimeout(function(){
@@ -479,5 +478,4 @@ circle.$el.addEventListener('mouseenter', () => {
 circle.$el.addEventListener('mouseleave', () => {
         circle.show()
 })
-*/
 
