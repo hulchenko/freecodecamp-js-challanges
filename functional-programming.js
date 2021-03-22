@@ -17,3 +17,20 @@ const getTea = (numOfCups) => {
 };
 
 const tea4TeamFCC = getTea(40);
+
+//#2 Prepare 27 cups of green tea and 13 cups of black tea and store them in tea4GreenTeamFCC and tea4BlackTeamFCC variables, respectively.
+const prepareGreenTea = () => 'greenTea';
+const prepareBlackTea = () => 'blackTea';
+
+const getTea = (prepareTea, numOfCups) => {
+  const teaCups = [];
+
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
+const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
