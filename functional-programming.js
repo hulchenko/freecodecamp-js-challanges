@@ -108,17 +108,18 @@ var new_s = s.myFilter(function (item) {
 });
 console.log(new_s);
 
-//Filter, map and reduce all together:
-function getRating(watchList) {
-  // Only change code below this line
-  var averageRating =
-    watchList
-      .filter((list) => list.Director === 'Christopher Nolan')
-      .map((list) => parseFloat(list.imdbRating))
-      .reduce((sumOfRatings, rating) => sumOfRatings + rating) /
-    watchList.filter((list) => list.Director === 'Christopher Nolan').length;
-
-  // Only change code above this line
-  return averageRating;
+//Sort. Alphabetic order:
+function alphabeticalOrder(arr) {
+  return arr.sort(function (a, b) {
+    return a === b ? 0 : a > b ? 1 : -1;
+  });
 }
-console.log(getRating(watchList));
+alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']);
+
+//Every. Returns boolean. True if ALL true, false if at least 1 of them is not true:
+function checkPositive(arr) {
+  return arr.every(function (value) {
+    return value > 0;
+  });
+}
+checkPositive([1, 2, 3, -4, 5]);
