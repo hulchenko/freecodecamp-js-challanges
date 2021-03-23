@@ -80,13 +80,45 @@ var s = [23, 65, 98, 5];
 
 Array.prototype.myMap = function (callback) {
   var newArray = [];
-  // Only change code below this line
   this.forEach((i) => newArray.push(callback(i)));
   //this = [23, 65, 98, 5]
-  // Only change code above this line
   return newArray;
 };
 
 var new_s = s.myMap(function (item) {
   return item * 2;
 });
+
+//Filter function manual alternative:
+// The global variable
+var s = [23, 65, 98, 5];
+
+Array.prototype.myFilter = function (callback) {
+  var newArray = [];
+  this.forEach(function (item) {
+    if (callback(item) === true) {
+      newArray.push(item);
+    }
+  });
+  return newArray;
+};
+
+var new_s = s.myFilter(function (item) {
+  return item % 2 === 1;
+});
+console.log(new_s);
+
+//Filter, map and reduce all together:
+function getRating(watchList) {
+  // Only change code below this line
+  var averageRating =
+    watchList
+      .filter((list) => list.Director === 'Christopher Nolan')
+      .map((list) => parseFloat(list.imdbRating))
+      .reduce((sumOfRatings, rating) => sumOfRatings + rating) /
+    watchList.filter((list) => list.Director === 'Christopher Nolan').length;
+
+  // Only change code above this line
+  return averageRating;
+}
+console.log(getRating(watchList));
