@@ -116,10 +116,22 @@ function alphabeticalOrder(arr) {
 }
 alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']);
 
-//Every. Returns boolean. True if ALL true, false if at least 1 of them is not true:
+//Every. Returns boolean. True if ALL true; false if at least 1 of them is not true:
 function checkPositive(arr) {
   return arr.every(function (value) {
     return value > 0;
   });
 }
 checkPositive([1, 2, 3, -4, 5]);
+
+//Some. Similar, returns if ANY value true/false
+
+//Currying a function. If function cannot receive more than 1 argument, we can create functions within a function to imitate multiple arguments:
+function add(x) {
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+    };
+  };
+}
+add(10)(20)(30);
