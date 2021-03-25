@@ -145,3 +145,20 @@ function convertHTML(str) {
 }
 
 console.log(convertHTML('Dolce & Gabbana'));
+
+//Sum All Odd Fibonacci Numbers
+function sumFibs(num) {
+  let prevNum = 0;
+  let currNum = 1;
+  let result = 0;
+  while (currNum <= num) {
+    if (currNum % 2 !== 0) {
+      result += currNum;
+    }
+    currNum = prevNum + currNum;
+    prevNum = currNum - prevNum;
+  }
+  return result;
+}
+
+sumFibs(4);
