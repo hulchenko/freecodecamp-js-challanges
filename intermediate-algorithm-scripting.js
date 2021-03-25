@@ -104,3 +104,22 @@ function fearNotLetter(str) {
 }
 
 fearNotLetter('abce');
+
+//Sorted Union:
+function uniteUnique(arr) {
+  let args = Array.from(arguments); //pull arguments into array
+  let myArr = [];
+  for (let i = 0; i < args.length; i++) {
+    //iterate through arguments first
+    for (let x = 0; x < args[i].length; x++) {
+      //iterate through each individual argument
+      if (!myArr.includes(args[i][x])) {
+        //goes through list of existing numbers and adds new(non-existing ones)
+        myArr.push(args[i][x]);
+      }
+    }
+  }
+  return myArr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
