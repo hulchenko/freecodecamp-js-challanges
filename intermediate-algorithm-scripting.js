@@ -60,3 +60,47 @@ function translatePigLatin(str) {
 }
 
 console.log(translatePigLatin('glove'));
+
+//Search and replace:
+function myReplace(str, before, after) {
+  if (before[0] === before[0].toUpperCase()) {
+    //check on uppercase
+    after = after.replace(after[0], after[0].toUpperCase()); //if true, bring replacement to uppercase
+  } else {
+    after = after.replace(after[0], after[0].toLowerCase()); //if false, bring replacement to lowercase
+  }
+  return str.replace(before, after);
+}
+myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped');
+
+//DNA Pairing:
+function pairElement(str) {
+  return str.split('').map((i) => {
+    if (i === 'G') {
+      return ['G', 'C'];
+    } else if (i === 'C') {
+      return ['C', 'G'];
+    } else if (i === 'A') {
+      return ['A', 'T'];
+    } else if (i === 'T') {
+      return ['T', 'A'];
+    }
+  });
+}
+
+pairElement('GCG');
+
+//Missing letters:
+function fearNotLetter(str) {
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  let strLen = str.length;
+  let getIndex = alphabet.indexOf(str[0]);
+  for (let i = getIndex; i < strLen + getIndex; i++) {
+    if (!str.includes(alphabet[i])) {
+      return alphabet[i];
+    }
+  }
+  return undefined;
+}
+
+fearNotLetter('abce');
