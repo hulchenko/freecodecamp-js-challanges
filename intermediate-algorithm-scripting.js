@@ -233,3 +233,28 @@ function addTogether() {
   }
 }
 addTogether(5)(7);
+
+//Make a Person:
+var Person = function (firstAndLast) {
+  this.getFirstName = function () {
+    return firstAndLast.split(' ')[0];
+  };
+  this.getLastName = function () {
+    return firstAndLast.split(' ')[1];
+  };
+  this.getFullName = function () {
+    return firstAndLast;
+  };
+  this.setFirstName = function (input) {
+    firstAndLast = input + ' ' + firstAndLast.split(' ')[1];
+  };
+  this.setLastName = function (input) {
+    firstAndLast = firstAndLast.split(' ')[0] + ' ' + input;
+  };
+  this.setFullName = function (input) {
+    firstAndLast = input;
+  };
+};
+
+var bob = new Person('Bob Ross');
+bob.getFirstName();
