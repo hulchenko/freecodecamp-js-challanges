@@ -217,3 +217,19 @@ truthCheck(
   ],
   'sex'
 );
+
+//Add arguments together:
+
+function addTogether() {
+  const [num1, num2] = Object(arguments); //defines inputted values Object.values(arguments) would work too.
+  if (typeof num1 !== 'number') {
+    return undefined; //checking first if number, if not no need to proceed - return undefined.
+  }
+  const second = (num2) => (typeof num2 === 'number' ? num1 + num2 : undefined); //second is a function, takes num2 as argument.
+  if (num2 !== undefined) {
+    return second(num2);
+  } else {
+    return second;
+  }
+}
+addTogether(5)(7);
