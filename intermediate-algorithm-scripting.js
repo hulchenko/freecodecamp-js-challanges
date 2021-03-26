@@ -265,14 +265,14 @@ function orbitalPeriod(arr) {
   var earthRadius = 6367.4447;
 
   // Loop through each item in the array arr
-  arr.map((i) => {
+  arr.map((key) => {
     // Calculate the Orbital period
-    //Add orbitalPeriod property
-    i.orbitalPeriod = Math.round(
-      2 * Math.PI * Math.sqrt(Math.pow(earthRadius + i.avgAlt, 3) / GM)
+    //Add orbitalPeriod property(key)
+    key.orbitalPeriod = Math.round(
+      2 * Math.PI * Math.sqrt(Math.pow(earthRadius + key.avgAlt, 3) / GM)
     );
     //Delete the avgAlt property
-    delete i.avgAlt;
+    delete key.avgAlt;
   });
   return arr;
 }
