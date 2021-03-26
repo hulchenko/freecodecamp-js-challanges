@@ -162,3 +162,31 @@ function sumFibs(num) {
 }
 
 sumFibs(4);
+
+//Drop it
+function dropElements(arr, func) {
+  while (!func(arr[0])) {
+    arr.shift();
+  }
+  return arr;
+}
+
+dropElements([1, 2, 3], function (n) {
+  return n < 3;
+});
+
+//Flatten nested array:
+function steamrollArray(arr) {
+  let myArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      let subArr = steamrollArray(arr[i]);
+      myArr = myArr.concat(subArr);
+    } else {
+      myArr.push(arr[i]);
+    }
+  }
+  return myArr;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
