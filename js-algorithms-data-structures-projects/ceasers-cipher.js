@@ -1,5 +1,5 @@
 function rot13(str) {
-  const original = [
+  const alphabet = [
     'A',
     'B',
     'C',
@@ -27,7 +27,7 @@ function rot13(str) {
     'Y',
     'Z',
   ];
-  const twisted = [
+  const twistedAlphabet = [
     'N',
     'O',
     'P',
@@ -55,20 +55,19 @@ function rot13(str) {
     'L',
     'M',
   ];
+  let regex = /([A-Z])/;
   let arr = [...str];
   let result = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if (i === -1) {
+    if (regex.test(arr[i]) === false) {
+      //check if characters match A-Z, if not - push, to keep punctuation
       result.push(arr[i]);
     } else {
-      let index = original.indexOf(arr[i]);
-      result.push(twisted[index]); //arr[i] = index in firstHalf
+      let index = alphabet.indexOf(arr[i]); //find index placement of the original alphabet
+      result.push(twistedAlphabet[index]); //replace with the same index of the twisted version
     }
   }
-  console.log(result.join(''));
+  return result.join('');
 }
 rot13('SERR CVMMN!');
-
-//need to add punctuation
-//split letters to words
